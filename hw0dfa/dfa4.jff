@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>144.0</x>
+			<y>295.0</y>
+			<label>Read leading 0's</label>
+			<initial/>
+		</state>
+		<state id="1" name="q1">
+			<x>278.0</x>
+			<y>299.0</y>
+			<label>Read first 1</label>
+		</state>
+		<state id="2" name="q2">
+			<x>394.0</x>
+			<y>300.0</y>
+			<label>Read following 0 or 1</label>
+		</state>
+		<state id="3" name="q3">
+			<x>555.0</x>
+			<y>300.0</y>
+			<label>Read final 0 or restart EOS</label>
+			<final/>
+		</state>
+		<state id="4" name="q4">
+			<x>460.0</x>
+			<y>240.0</y>
+			<label>Read 1 following 0</label>
+			<final/>
+		</state>
+		<state id="5" name="q5">
+			<x>408.0</x>
+			<y>181.0</y>
+			<label>Read a remaining 1's</label>
+		</state>
+		<state id="6" name="q6">
+			<x>555.0</x>
+			<y>180.0</y>
+			<label>Read 0 following second 1</label>
+			<final/>
+		</state>
+		<state id="7" name="q7">
+			<x>554.0</x>
+			<y>61.0</y>
+			<final/>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>3</from>
+			<to>0</to>
+			<controlx>368</controlx>
+			<controly>656</controly>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>4</to>
+			<controlx>408</controlx>
+			<controly>246</controly>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>2</to>
+			<controlx>462</controlx>
+			<controly>291</controly>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>5</to>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>7</to>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>3</to>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>5</to>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>6</to>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>7</to>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>1</to>
+			<controlx>358</controlx>
+			<controly>582</controly>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>6</to>
+			<read>0</read>
+		</transition>
+		<note>
+			<text>Create a DFA that accepts strings whose third-to-last (third-from-right) bit is a 1.</text>
+			<x>6.0</x>
+			<y>17.0</y>
+		</note>
+	</automaton>
+</structure>

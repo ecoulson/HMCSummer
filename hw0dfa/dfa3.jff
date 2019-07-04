@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>142.0</x>
+			<y>237.0</y>
+			<label>Initial State + Multiple of 6</label>
+			<initial/>
+			<final/>
+		</state>
+		<state id="1" name="q1">
+			<x>304.0</x>
+			<y>238.0</y>
+			<label>Reads a multiple of 1</label>
+		</state>
+		<state id="2" name="q2">
+			<x>446.0</x>
+			<y>239.0</y>
+			<label>Reads a multiple of 2</label>
+			<final/>
+		</state>
+		<state id="3" name="q3">
+			<x>603.0</x>
+			<y>239.0</y>
+			<label>Reads a multipule of 3</label>
+			<final/>
+		</state>
+		<state id="4" name="q4">
+			<x>760.0</x>
+			<y>239.0</y>
+			<label>Reads multiple of 4</label>
+			<final/>
+		</state>
+		<state id="5" name="q5">
+			<x>914.0</x>
+			<y>239.0</y>
+			<label>Reads a multiple of 5</label>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>3</from>
+			<to>4</to>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>0</to>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>2</to>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>3</to>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>4</to>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>5</to>
+			<read>1</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>0</to>
+			<controlx>515</controlx>
+			<controly>426</controly>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>0</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>5</to>
+			<read>0</read>
+		</transition>
+		<note>
+			<text>Create a DFA that accepts strings with any number of 1s...</text>
+			<x>8.0</x>
+			<y>11.0</y>
+		</note>
+		<note>
+			<text>... but the number of 0s must be a multiple of 2, of 3, or of both</text>
+			<x>8.0</x>
+			<y>31.0</y>
+		</note>
+	</automaton>
+</structure>
